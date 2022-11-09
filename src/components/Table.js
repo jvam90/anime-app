@@ -1,10 +1,13 @@
 import './Table.css';
+import Loader from './Loader';
 
 function Table(props) {
     let data = props.data.data;
 
     if (!data) {
-        return null;
+        return(
+            <Loader></Loader>
+        )
     }
     return (
         <table className="table table-hover">
