@@ -2,6 +2,7 @@ import './Homepage.css';
 import Content from '../components/Content';
 import Table from '../components/Table';
 import { useState, useEffect } from 'react';
+import Anime from '../models/Anime';
 
 function Homepage() {
     const [animes, setAnimes] = useState([]);
@@ -10,7 +11,13 @@ function Homepage() {
         fetch('https://kitsu.io/api/edge/trending/anime')
             .then((response) => response.json())
             .then((data) => {
-                setAnimes(data);
+                let animeList = [];
+                
+                data.data.forEach(anime => {
+                    const a = new Anime(anime.attributes.titles.en, anime.attributes.averageRating, anime.attributes.description);
+                     animeList.push(a);
+                });
+                setAnimes(animeList);
             })
             .catch((err) => {
                 console.log(err.message);

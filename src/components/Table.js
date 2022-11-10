@@ -2,8 +2,7 @@ import './Table.css';
 import Loader from './Loader';
 
 function Table(props) {
-    let data = props.data.data;
-
+    let data = props.data;
     if (!data) {
         return(
             <Loader></Loader>
@@ -23,9 +22,9 @@ function Table(props) {
                     data.map((anime,index) => {
                         return (
                             <tr key={index}>
-                                <td>{anime.attributes.titles.en}</td>
-                                <td>{anime.attributes.titles.en}</td>
-                                <td>{anime.attributes.titles.en}</td>
+                                <td>{anime.title}</td>
+                                <td>{anime.averageRating}</td>
+                                <td>{anime.description}</td>
                             </tr>
                         )
                     })
