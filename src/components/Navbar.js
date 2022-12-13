@@ -31,6 +31,15 @@ function Navbar() {
                   Add Stuff
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/mystuff"
+                >
+                  My Stuff
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
