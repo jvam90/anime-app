@@ -1,10 +1,14 @@
 import "./MyStuffTable.css";
-import Loader from "./Loader";
 
 function MyStuffTable(props) {
   let data = props.data;
-  if (!data) {
-    return <Loader></Loader>;
+  console.log(data);
+  if (!data || data.length == 0) {
+    return (
+      <div>
+        <h1 className="text-center">You're not watching anything!</h1>;
+      </div>
+    );
   }
   return (
     <table className="table table-hover">

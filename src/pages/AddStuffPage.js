@@ -64,9 +64,9 @@ function AddStuffPage() {
                   onChange={(e) => setType(e.target.value)}
                 >
                   <option value="">Select one option...</option>
-                  <option value="anime">Anime</option>
-                  <option value="tvshow">TV Show</option>
-                  <option value="tvseries">TV Series</option>
+                  <option value="Anime">Anime</option>
+                  <option value="TV Show">TV Show</option>
+                  <option value="TV Series">TV Series</option>
                 </select>
               </div>
               <div className="form-group">

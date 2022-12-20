@@ -1,7 +1,6 @@
 import "./MyStuffPage.css";
 import Content from "../components/Content";
 import MyStuffTable from "../components/MyStuffTable";
-import Anime from "../models/Anime";
 import { useState, useEffect } from "react";
 import api from "../services/api";
 const url = "http://localhost:3333/anime";
