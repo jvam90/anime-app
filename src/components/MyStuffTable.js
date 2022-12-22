@@ -3,7 +3,7 @@ import "./MyStuffTable.css";
 function MyStuffTable(props) {
   let data = props.data;
   console.log(data);
-  if (!data || data.length == 0) {
+  if (!data || data.length === 0) {
     return (
       <div>
         <h1 className="text-center">You're not watching anything!</h1>;
